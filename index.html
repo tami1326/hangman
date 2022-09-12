@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src=index.js></script> 
+    <link rel="stylesheet" href="style.css">
+    <div class="header">
+          <div class="h4 pb-2 mb-4 text-$indigo border-bottom border-dark">
+          <h1>Let's play hangman!</h1>
+          </div>
+    </div>
+    <div class="rules">
+      <p>The rules are simple: guess the word letter by letter and don't get hanged.</p>
+    </div>
+    <div class="container">
+        <div class="form">
+          <input class="text" type="text" id="wordToBeGuessed" placeholder="Enter your word here" aria-label=".form-control-sm example" style="width: 250px;">
+        </div>
+        <div class="button">
+          <button type="button" class="button" id="wordToBeGuessedButton" onclick="addWord(); addLines();">Save word</button>
+        </div>
+        <div class="form">
+          <input class="text" type="text" id="guessedLetter" placeholder="Your guess here" aria-label=".form-control-sm example" style="width: 250px;">
+        </div>
+        <div class="button">
+          <button type="button" class="button" id="wordToBeGuessedButton" onclick="findLetter();">Guess!</button>
+        </div>
+    </div>
+      <div class="container text">
+        <div class="mistakes" id="wrongLetters"></div>
+      </div>
+      <div class="figureContainer">
+        <svg height="250" width="200" class="hangmanBody">
+          <line x1="60" y1="20" x2="140" y2="20" />
+          <line x1="140" y1="20" x2="140" y2="50" />
+          <line x1="60" y1="20" x2="60" y2="230" />
+          <line x1="20" y1="230" x2="100" y2="230" />
+          <circle cx="140" cy="70" r="20" class="bodyPart"/>
+          <line x1="140" y1="90" x2="140" y2="150" class="bodyPart"/>
+          <line x1="140" y1="120" x2="120" y2="100" class="bodyPart"/>
+          <line x1="140" y1="120" x2="160" y2="100" class="bodyPart"/>
+          <line x1="140" y1="150" x2="120" y2="180" class="bodyPart"/>
+          <line x1="140" y1="150" x2="160" y2="180" class="bodyPart"/>
+      </svg>
+      </div>
+      <div class="container text-center">
+        <div class="row" style="display: flex; flex-direction:column; flex:1;">
+          <div class="d-flex p-2" id="underline"></div>
+        </div>
+      </div>
+      <div id="winnerPopup" class="modal">
+        <div class="modal-content">
+          <p>Congratulations! You won!</p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" onclick="restartGame();">Play again?</button>
+          </div>
+        </div>
+      </div>
+      <div id="looserPopup" class="modal">
+        <div class="modal-content">
+          <p> Maybe try again? </p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" onclick="restartGame();">Play again?</button>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
