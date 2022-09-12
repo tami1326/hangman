@@ -1,0 +1,93 @@
+body {
+	background-color: rgb(247, 235, 242);
+}
+
+.container {
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+	color:gray;
+	background-color: rgba(154, 70, 154, 0.762);
+	font: caption;
+	-webkit-text-fill-color: whitesmoke;
+  	-webkit-text-stroke: 1px;
+}
+.text {
+	background: rgb(247, 238, 247);
+	width: 250px;
+	border-color: hotpink;
+	text-align: center;
+	align-self: center;
+}
+
+.button {
+	display: inline;
+  	justify-content: center;
+  	align-items: center;
+	background-color: hotpink;
+	color: black;
+  	font-size: 12px;
+}
+
+.figureContainer {
+	padding: 35px 35px;
+	position: relative;
+	margin: auto;
+	height: 250px;
+	width: 250px;
+}
+
+.hangmanBody {
+	fill: transparent;
+	stroke: hotpink;
+	stroke-width: 4px;
+	stroke-linecap: round;
+}
+
+.bodyPart{
+    display: none;
+} 
+
+.mistakes {
+	color: rgb(50, 15, 33);
+	font-size: 20px;
+	font-style: oblique;
+}
+
+.rules {
+	color: hotpink;
+	font:caption;
+	font-size: 20px;
+	text-align: center;
+}
+
+.row {
+	text-align: center;
+	bottom: 0px;
+	font-size: 50px;
+	color: hotpink;
+	padding: 100px 100px;
+	width: auto;
+}
+ 
+.modal {
+	position: absolute;
+	float: left;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	width: 500px;
+	height: 300px;
+  }
+  
+  .modal-content {
+	background-color: #f3d3e8;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	text-align: left;
+  }
